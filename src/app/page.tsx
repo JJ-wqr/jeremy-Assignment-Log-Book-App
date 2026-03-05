@@ -1,95 +1,26 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main style={{
+      minHeight:"100vh",background:"linear-gradient(135deg,#0f172a,#1e1b4b)",
+      display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",
+      padding:"40px 20px",fontFamily:"system-ui,sans-serif",color:"#e2e8f0"
+    }}>
+      <div style={{ fontSize:64, marginBottom:16 }}>📚</div>
+      <h1 style={{
+        fontSize:40,fontWeight:800,margin:"0 0 12px",
+        background:"linear-gradient(135deg,#a5b4fc,#c4b5fd)",
+        WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"
+      }}>Assignment LogBook API</h1>
+      <p style={{ color:"#94a3b8",fontSize:16,marginBottom:32,textAlign:"center" }}>
+        YourName · Next.js 14 · TypeScript · Swagger UI
+      </p>
+      <Link href="/api-docs" style={{
+        background:"linear-gradient(135deg,#6366f1,#8b5cf6)",color:"#fff",
+        padding:"14px 36px",borderRadius:12,textDecoration:"none",fontWeight:700,fontSize:16
+      }}>
+        📖 Open Swagger Docs
+      </Link>
+    </main>
   );
 }
